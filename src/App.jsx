@@ -22,7 +22,7 @@ export default function App(){
   function inc(item){ setCart(prev=>prev.map(p=>p.id===item.id? {...p, qty: p.qty+1}: p)) }
   function dec(item){ setCart(prev=>prev.flatMap(p=> p.id===item.id? (p.qty>1? [{...p, qty: p.qty-1}]:[]) : [p])) }
   function removeItem(item){ setCart(prev=>prev.filter(p=>p.id!==item.id)) }
-  function checkout(){ alert('สั่งซื้อเรียบร้อย (จำลอง)'); setCart([]) }
+  function checkout(){ alert('สั่งซื้อเรียบร้อย'); setCart([]) }
 
   function logout(){ localStorage.removeItem('pop_user'); setUser(null) }
 
